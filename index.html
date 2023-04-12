@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <title>Gestion de taller electronica</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">Gestion de Taller</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/clientes.html">Clientes</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/entrada.html">Entrada</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/servicio.html">Servicios</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/salida.html">Salida</a>
+              </li>
+
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              <strong>Nuevo Cliente</strong>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+
+                <p>La fecha actual es: <time id="currentDate" name="currentDate"></time></p>
+            
+                <form  id="myForm">
+            
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Nombre</label>
+                        <input type="text" name="firstName" class="form-control" id="firstName" placeholder="Ingrese el nombre del cliente" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Apellido</label>
+                        <input type="text" name="lastNamee" class="form-control" id="lastName" placeholder="Ingrese el apellido del cliente" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Telefono</label>
+                        <input type="tel" name="phone" class="form-control" id="phone" placeholder="Ingrese el numero de telefono" required>
+                    </div>
+            
+                    <div class="col-12">
+                        <button name="register" class="btn btn-primary" type="submit">Cargar Cliente</button>
+                    </div>
+
+                    
+            
+                </form>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              <strong>Lista de clientes</strong>
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+              
+
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Buscar Cliente</label>
+                    <input type="text" name="firstName" class="form-control" id="search" placeholder="Ingrese algun dato del cliente">
+                </div>
+
+
+            
+                
+
+                <table id="dataTable" class="table caption-top">
+                    <caption>Lista de Clientes</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Nombre completo</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Herramientas</th>
+                        <th scope="col">Fecha</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+
+
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
